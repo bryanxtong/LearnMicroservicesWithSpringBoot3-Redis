@@ -1,0 +1,23 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="LOGS" class="com.cwbase.logback.RedisAppender">
+        <source>gateway</source>
+        <sourcePath>gateway</sourcePath>
+        <type>application</type>
+        <tags>production</tags>
+        <host>${SPRING_CLOUD_REDIS_HOST:-localhost}</host>
+        <port>6379</port>
+        <key>logs</key>
+    </appender>
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="LOGS" />
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="ASYNC" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
