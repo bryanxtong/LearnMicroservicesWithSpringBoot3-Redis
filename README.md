@@ -1,6 +1,6 @@
-# Learn Microservices with Spring Boot 3 - (Spring Cloud and Kafka)
+# Learn Microservices with Spring Boot 3 - (Spring Cloud and Redis)
 This repository contains the source code of the practical use case described in the book [Learn Microservices with Spring Boot 3 (3rd Edition)](https://link.springer.com/book/10.1007/978-1-4842-9757-5).
-And I made some changes to logback kafka appender to add headers https://github.com/danielwegener/logback-kafka-appender and add micrometer zipkin trace support.
+And I made some changes to add a logback redis appender https://github.com/kmtong/logback-redis-appender and add micrometer zipkin trace support.
 
 ## Features
 
@@ -12,7 +12,8 @@ The main concepts included in this project are:
 
 * Why do we need Centralized Logs and Distributed tracing?
 * Why would I create Docker images for my applications?
-* Building a simple logger application with Spring Boot and Kafka using logback-kafka-appender.
+* Building a simple logger application with Spring Boot and Redis using logback redis appender.
+* Event Driven message processing with redis stream for business
 * Distributed traces with Micrometer and Zipkin.
 * Building Docker images for Spring Boot applications with Cloud Native Buildpacks.
 * Container Platforms, Application Platforms, and Cloud Services.
