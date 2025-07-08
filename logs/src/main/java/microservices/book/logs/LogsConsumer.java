@@ -15,6 +15,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * Read the logs with lettuce
+ */
 @Service
 @Slf4j
 public class LogsConsumer implements SmartLifecycle {
